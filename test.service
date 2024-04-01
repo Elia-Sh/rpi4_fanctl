@@ -1,0 +1,15 @@
+[Unit]
+Description=A test unit 
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/elia/git/rpi4_fanctl/rpi4_fanctl.py
+Type=notify
+Restart=always
+
+
+[Install]
+WantedBy=default.target
+RequiredBy=network.target
+
+
